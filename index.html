@@ -5,55 +5,161 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Leal Assessoria Contábil</title>
   <link rel="icon" type="image/png" href="favicon.png">
-  <meta name="description" content="Contabilidade para MEIs com foco em praticidade, confiança e atendimento personalizado. Leal Assessoria Contábil cuida do seu CNPJ enquanto você cuida do seu negócio.">
-  <meta name="keywords" content="contabilidade MEI, assessoria contábil, abrir MEI, declaração MEI, DAS MEI, Leal Assessoria Contábil">
+  <meta name="description" content="Contabilidade especializada em MEI e microempresas com atendimento próximo, digital e descomplicado.">
+  <meta name="keywords" content="contabilidade MEI, contador MEI, assessoria contábil, serviços fiscais, abertura de CNPJ">
   <meta name="author" content="Leal Assessoria Contábil">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
-    body { background: #f8f9fa; color: #333; }
-    header { background: #007f5f; color: white; padding: 20px; text-align: center; }
-    header img.logo { max-width: 120px; margin-bottom: 10px; }
-    header h1 { font-size: 2.5rem; }
-    header p.slogan { font-size: 1.2rem; margin-top: 10px; font-style: italic; }
-    nav { background: #004b38; display: flex; justify-content: center; }
-    nav a { color: white; text-decoration: none; padding: 15px 20px; display: block; }
-    nav a:hover { background: #006b4f; }
-    section { padding: 40px 20px; max-width: 1000px; margin: auto; }
-    .hero { text-align: center; padding: 60px 20px; background: #d1fae5; }
-    .hero h2 { font-size: 2rem; margin-bottom: 20px; color: #065f46; }
-    .services, .about, .contact { margin-top: 40px; }
-    .services ul { list-style: none; padding-left: 0; }
-    .services li { padding: 10px 0; border-bottom: 1px solid #ddd; }
-    footer { background: #004b38; color: white; text-align: center; padding: 20px; margin-top: 40px; }
-    .btn-whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25d366;
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+    body { background: #f9fafb; color: #1f2937; line-height: 1.6; animation: fadeIn 1s ease-in; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    header {
+      background: #064e3b;
       color: white;
-      border: none;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      font-size: 28px;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header img.logo {
+      max-width: 100px;
+      margin-bottom: 10px;
+    }
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+    header p.slogan {
+      font-size: 1.1rem;
+      font-style: italic;
+      opacity: 0.9;
+    }
+    nav {
+      background: #10b981;
       display: flex;
-      align-items: center;
       justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      font-weight: 600;
       text-decoration: none;
     }
-    form { margin-top: 20px; }
-    label { display: block; margin-top: 15px; }
-    input, textarea { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; }
-    button { margin-top: 15px; padding: 10px 20px; background-color: #007f5f; color: white; border: none; border-radius: 4px; cursor: pointer; }
-    button:hover { background-color: #005f46; }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+      animation: fadeIn 0.8s ease-in;
+    }
+    .hero {
+      background: #ecfdf5;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .hero h2 {
+      font-size: 2rem;
+      color: #065f46;
+      margin-bottom: 20px;
+    }
+    .services, .about, .contact {
+      margin-top: 40px;
+    }
+    .services ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      list-style: none;
+      padding-left: 0;
+    }
+    .services li {
+      background: white;
+      border-left: 5px solid #10b981;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      transition: transform 0.3s ease;
+    }
+    .services li:hover {
+      transform: translateY(-5px);
+    }
+    .services li i {
+      font-size: 1.5rem;
+      color: #10b981;
+      margin-top: 3px;
+    }
+    footer {
+      background: #1f2937;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      font-size: 0.9rem;
+    }
+    form {
+      margin-top: 30px;
+    }
+    label {
+      display: block;
+      margin-top: 20px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #10b981;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #059669;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.6rem;
+      }
+      .hero h2 {
+        font-size: 1.5rem;
+      }
+      nav {
+        gap: 10px;
+        flex-direction: column;
+        align-items: center;
+      }
+      .services li {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
     <img class="logo" src="logo.png" alt="Logo Leal Assessoria Contábil">
     <h1>Leal Assessoria Contábil</h1>
-    <p class="slogan">Sua parceira fiel na vida de MEI</p>
+    <p class="slogan">Especialistas em contabilidade para MEIs e microempresas</p>
   </header>
   <nav>
     <a href="#servicos">Serviços</a>
@@ -61,26 +167,27 @@
     <a href="#contato">Contato</a>
   </nav>
   <section class="hero">
-    <h2>Contabilidade simples, segura e feita pra você, MEI.</h2>
-    <p>Deixe a burocracia com a gente e foque no que você faz de melhor.</p>
+    <h2>Contabilidade simples, digital e descomplicada</h2>
+    <p>Abra, regularize ou cuide do seu CNPJ com quem entende do assunto.</p>
   </section>
   <section class="services" id="servicos">
-    <h3>Serviços</h3>
+    <h3>Nossos Serviços</h3>
     <ul>
-      <li>Abertura de MEI</li>
-      <li>Emissão de DAS e boletos mensais</li>
-      <li>Declaração Anual do MEI</li>
-      <li>Consultoria fiscal e contábil</li>
-      <li>Encerramento de CNPJ</li>
+      <li><i class="fas fa-briefcase"></i> Abertura e encerramento de MEI</li>
+      <li><i class="fas fa-file-invoice-dollar"></i> Emissão de DAS e declaração anual</li>
+      <li><i class="fas fa-balance-scale"></i> Consultoria fiscal e tributária</li>
+      <li><i class="fas fa-user-check"></i> Regularização de pendências no CNPJ</li>
+      <li><i class="fas fa-chart-line"></i> Planejamento contábil e financeiro</li>
+      <li><i class="fab fa-whatsapp"></i> Atendimento personalizado por WhatsApp</li>
     </ul>
   </section>
   <section class="about" id="sobre">
-    <h3>Sobre</h3>
-    <p>A Leal Assessoria Contábil nasceu com a missão de apoiar microempreendedores com uma contabilidade acessível, confiável e descomplicada. Atuamos com foco em MEIs, oferecendo atendimento próximo e soluções feitas sob medida para o seu dia a dia.</p>
+    <h3>Sobre a Leal</h3>
+    <p>A Leal Assessoria Contábil foi criada para apoiar microempreendedores com soluções contábeis práticas, acessíveis e digitais. Atendemos MEIs e pequenas empresas com agilidade, clareza e empatia.</p>
   </section>
   <section class="contact" id="contato">
-    <h3>Contato</h3>
-    <form action="https://formspree.io/f/xeogzvgk" method="POST">
+    <h3>Fale Conosco</h3>
+    <form action="https://formspree.io/f/mleqkjzy" method="POST">
       <label for="nome">Nome:</label>
       <input type="text" name="nome" required>
 
@@ -92,12 +199,11 @@
 
       <button type="submit">Enviar</button>
     </form>
-    <p style="margin-top: 20px;">Ou fale conosco pelo WhatsApp: (11) 99999-9999<br>
-    ou envie um e-mail para: contato@lealassessoriacontabil.com.br</p>
+    <p style="margin-top: 20px;">Ou nos chame pelo WhatsApp: (11) 99999-9999<br>
+    Email: contato@lealassessoriacontabil.com.br</p>
   </section>
   <footer>
     <p>&copy; 2025 Leal Assessoria Contábil. Todos os direitos reservados.</p>
   </footer>
-  <a class="btn-whatsapp" href="https://wa.me/5511999999999" target="_blank" title="Fale conosco no WhatsApp">💬</a>
 </body>
 </html>
