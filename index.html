@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leal Assessoria Contábil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background: #f8f9fa; color: #333; }
+    header { background: #007f5f; color: white; padding: 20px; text-align: center; }
+    header img.logo { max-width: 120px; margin-bottom: 10px; }
+    header h1 { font-size: 2.5rem; }
+    header p.slogan { font-size: 1.2rem; margin-top: 10px; font-style: italic; }
+    nav { background: #004b38; display: flex; justify-content: center; }
+    nav a { color: white; text-decoration: none; padding: 15px 20px; display: block; }
+    nav a:hover { background: #006b4f; }
+    section { padding: 40px 20px; max-width: 1000px; margin: auto; }
+    .hero { text-align: center; padding: 60px 20px; background: #d1fae5; }
+    .hero h2 { font-size: 2rem; margin-bottom: 20px; color: #065f46; }
+    .services, .about, .contact { margin-top: 40px; }
+    .services ul { list-style: none; padding-left: 0; }
+    .services li { padding: 10px 0; border-bottom: 1px solid #ddd; }
+    footer { background: #004b38; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+    .btn-whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+    form { margin-top: 20px; }
+    label { display: block; margin-top: 15px; }
+    input, textarea { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; }
+    button { margin-top: 15px; padding: 10px 20px; background-color: #007f5f; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    button:hover { background-color: #005f46; }
+  </style>
+</head>
+<body>
+  <header>
+    <img class="logo" src="logo.png" alt="Logo Leal Assessoria Contábil">
+    <h1>Leal Assessoria Contábil</h1>
+    <p class="slogan">Sua parceira fiel na vida de MEI</p>
+  </header>
+  <nav>
+    <a href="#servicos">Serviços</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#contato">Contato</a>
+  </nav>
+  <section class="hero">
+    <h2>Contabilidade simples, segura e feita pra você, MEI.</h2>
+    <p>Deixe a burocracia com a gente e foque no que você faz de melhor.</p>
+  </section>
+  <section class="services" id="servicos">
+    <h3>Serviços</h3>
+    <ul>
+      <li>Abertura de MEI</li>
+      <li>Emissão de DAS e boletos mensais</li>
+      <li>Declaração Anual do MEI</li>
+      <li>Consultoria fiscal e contábil</li>
+      <li>Encerramento de CNPJ</li>
+    </ul>
+  </section>
+  <section class="about" id="sobre">
+    <h3>Sobre</h3>
+    <p>A Leal Assessoria Contábil nasceu com a missão de apoiar microempreendedores com uma contabilidade acessível, confiável e descomplicada. Atuamos com foco em MEIs, oferecendo atendimento próximo e soluções feitas sob medida para o seu dia a dia.</p>
+  </section>
+  <section class="contact" id="contato">
+    <h3>Contato</h3>
+    <form action="mailto:contato@lealassessoriacontabil.com.br" method="post" enctype="text/plain">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <p style="margin-top: 20px;">Ou fale conosco pelo WhatsApp: (11) 99999-9999<br>
+    ou envie um e-mail para: contato@lealassessoriacontabil.com.br</p>
+  </section>
+  <footer>
+    <p>&copy; 2025 Leal Assessoria Contábil. Todos os direitos reservados.</p>
+  </footer>
+  <a class="btn-whatsapp" href="https://wa.me/5511999999999" target="_blank" title="Fale conosco no WhatsApp">💬</a>
+</body>
+</html>
