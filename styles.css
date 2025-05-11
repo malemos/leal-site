@@ -93,6 +93,23 @@ body.home .plan-card li {
 }
 
 /* ---------- CADASTRO PAGE STYLES ---------- */
+body.cadastro header {
+  background-color: #064e3b;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+body.cadastro header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+body.cadastro header p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
 body.cadastro .form-section {
   padding: 2rem 1rem;
   max-width: 600px;
@@ -100,6 +117,13 @@ body.cadastro .form-section {
   background: white;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+body.cadastro h3 {
+  font-size: 1.4rem;
+  color: #065f46;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 body.cadastro form {
@@ -122,7 +146,23 @@ body.cadastro label {
   font-weight: 600;
 }
 
-/* ---------- SHARED STYLES ---------- */
+body.cadastro button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #10b981;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+body.cadastro button:hover {
+  background-color: #059669;
+}
+
+/* ---------- SHARED FOOTER ---------- */
 footer {
   background-color: #1f2937;
   color: white;
