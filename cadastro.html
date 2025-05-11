@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro - Leal Contabilidade</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Leal Contabilidade Online</h1>
+    <p>Soluções contábeis digitais para MEIs e pequenas empresas</p>
+  </header>
+
+  <section class="form-section" id="form">
+    <h3>Cadastro rápido</h3>
+    <form id="cadastroForm">
+      <label>Nome completo:</label>
+      <input type="text" name="nome" required />
+
+      <label>Email:</label>
+      <input type="email" name="email" required />
+
+      <label>CPF ou CNPJ:</label>
+      <input type="text" name="cpfcnpj" required />
+
+      <label>Serviço desejado:</label>
+      <select name="servico" required>
+        <option value="">Selecione</option>
+        <option value="mei">Contabilidade MEI</option>
+        <option value="simples">Microempresa Simples</option>
+        <option value="irpf">Imposto de Renda Pessoa Física</option>
+      </select>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <p id="mensagem" style="margin-top:10px;"></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Leal Contabilidade Online</p>
+  </footer>
+
+  <script>
+    document.getElementById("cadastroForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
+      const form = e.target;
+      const dados = {
+        nome: form.nome.value,
+        email: form.email.value,
+        cpfcnpj: form.cpfcnpj.value,
+        servico: form.servico.value
+      };
+
+      try {
+        const resposta = await fetch("http://localhost:3000/cadastro", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(dados)
+        });
+
+        if (resposta.ok) {
+          document.getElementById("mensagem").innerText = "Cadastro enviado com sucesso!";
+          form.reset();
+        } else {
+          document.getElementById("mensagem").innerText = "Erro ao enviar cadastro.";
+        }
+      } catch (erro) {
+        console.error(erro);
+        document.getElementById("mensagem").innerText = "Falha na comunicação com o servidor.";
+      }
+    });
+    function aplicarMascaraCpfCnpj(input) {
+      input.addEventListener("input", () => {
+        let valor = input.value.replace(/\D/g, "");
+        if (valor.length <= 11) {
+          // CPF
+          valor = valor.replace(/(\d{3})(\d)/, "$1.$2");
+          valor = valor.replace(/(\d{3})(\d)/, "$1.$2");
+          valor = valor.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+        } else {
+          // CNPJ
+          valor = valor.replace(/^(\d{2})(\d)/, "$1.$2");
+          valor = valor.replace(/^(\d{2})\.(\d{3})(\d)/, "$1.$2.$3");
+          valor = valor.replace(/\.(\d{3})(\d)/, ".$1/$2");
+          valor = valor.replace(/(\d{4})(\d)/, "$1-$2");
+        }
+        input.value = valor;
+      });
+    }
+
+    // Ativa a máscara ao carregar a página
+    document.addEventListener("DOMContentLoaded", () => {
+      const campo = document.querySelector('input[name="cpfcnpj"]');
+      if (campo) aplicarMascaraCpfCnpj(campo);
+    });
+  </script>
+</body>
+</html>
