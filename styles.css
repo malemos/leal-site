@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -5,7 +9,7 @@ body {
   color: #1f2937;
 }
 
-/* ---------- HOME PAGE STYLES ---------- */
+/* HOME PAGE STYLES */
 body.home header {
   background-color: #064e3b;
   color: white;
@@ -112,13 +116,6 @@ body.home .cta-final {
   margin: 0 auto;
 }
 
-body.home .about p,
-body.home .benefits ul,
-body.home .testimonials blockquote {
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
 body.home .benefits ul {
   list-style: none;
   padding: 0;
@@ -142,7 +139,7 @@ body.home .cta-final {
   margin-top: 2rem;
 }
 
-/* ---------- CADASTRO PAGE STYLES ---------- */
+/* CADASTRO PAGE STYLES */
 body.cadastro header {
   background-color: #064e3b;
   color: white;
@@ -190,6 +187,7 @@ body.cadastro textarea {
   border-radius: 6px;
   font-size: 1rem;
   width: 100%;
+  max-width: 100%;
 }
 
 body.cadastro label {
@@ -212,27 +210,11 @@ body.cadastro button:hover {
   background-color: #059669;
 }
 
-/* ---------- SHARED FOOTER ---------- */
+/* SHARED FOOTER */
 footer {
   background-color: #1f2937;
   color: white;
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
-}
-
-body.cadastro button {
-  padding: 0.75rem;
-  font-size: 1rem;
-  font-weight: bold;
-  color: white;
-  background-color: #10b981;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-body.cadastro button:hover {
-  background-color: #059669;
 }
