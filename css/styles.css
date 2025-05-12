@@ -1,220 +1,307 @@
-* {
-  box-sizing: border-box;
-}
-
+/* General page styling */
 body {
-  margin: 0;
   font-family: 'Inter', sans-serif;
-  background: #f9fafb;
-  color: #1f2937;
-}
-
-/* HOME PAGE STYLES */
-body.home header {
-  background-color: #064e3b;
-  color: white;
-  text-align: center;
-  padding: 2rem 1rem;
-}
-
-body.home header h1 {
+  color: #333;
   margin: 0;
-  font-size: 2rem;
+  background-color: #f4f7f6; /* Light gray background for better contrast */
 }
 
-body.home header p {
-  font-size: 1rem;
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  background-color: #004d40; /* Darker, more professional green */
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem; /* Larger for impact */
+}
+
+header p {
+  font-size: 1.1rem;
   opacity: 0.9;
 }
 
-body.home .hero {
+/* Navigation - Assuming a simple nav for now, can be expanded */
+nav {
+  background-color: #00382e; /* Slightly darker green for nav */
+  padding: 1rem 0;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #e0f2f1; /* Lighter, more inviting green */
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.2rem;
+  color: #004d40;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+/* Buttons */
+.btn {
+  background-color: #00796b; /* Teal variant for primary action */
+  color: white;
+  padding: 0.8rem 1.8rem;
+  text-decoration: none;
+  border-radius: 25px; /* Softer, more modern rounded corners */
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+  background-color: #004d40; /* Darker shade on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Sections */
+section {
   padding: 3rem 1rem;
   text-align: center;
-  background-color: #ecfdf5;
 }
 
-body.home .hero h2 {
+section h3 {
   font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: #065f46;
+  color: #004d40;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block; /* Allows for pseudo-element underlining */
 }
 
-body.home .hero p {
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
+section h3::after { /* Underline effect for section titles */
+  content: '';
+  display: block;
+  width: 60px; /* Adjust width as needed */
+  height: 3px;
+  background-color: #00796b; /* Teal accent */
+  margin: 0.5rem auto 0;
 }
 
-body.home .btn {
-  display: inline-block;
-  background-color: #10b981;
-  color: white;
-  font-weight: bold;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
+/* Plans Section */
+.plans-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
+  justify-content: center;
+  gap: 2rem;
 }
 
-body.home .btn:hover {
-  background-color: #059669;
-}
-
-body.home .plans {
-  padding: 2rem 1rem;
-  text-align: center;
-}
-
-body.home .plans h3,
-body.home .about h3,
-body.home .benefits h3,
-body.home .testimonials h3,
-body.home .cta-final h3 {
-  font-size: 1.6rem;
-  color: #065f46;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-body.home .plan-card {
+.plan-card {
   background: white;
-  border: 1px solid #e5e7eb;
-  border-left: 6px solid #10b981;
+  border: 1px solid #ddd;
   border-radius: 10px;
-  padding: 1.5rem;
-  margin: 1rem auto;
-  max-width: 400px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  width: 100%;
+  max-width: 350px; /* Max width for cards */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+  justify-content: space-between; /* Distribute space */
 }
 
-body.home .plan-card h4 {
-  font-size: 1.2rem;
-  color: #065f46;
+.plan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
-body.home .plan-card p {
+.plan-card h4 {
+  font-size: 1.5rem;
+  color: #004d40;
+  margin-top: 0;
+}
+
+.plan-card .price {
+  font-size: 1.8rem;
   font-weight: bold;
-  margin-bottom: 1rem;
+  color: #00796b;
+  margin: 1rem 0;
 }
 
-body.home .plan-card ul {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 1.5rem;
-}
-
-body.home .plan-card li {
-  margin: 0.5rem 0;
-  text-align: left;
-}
-
-body.home .about,
-body.home .benefits,
-body.home .testimonials,
-body.home .cta-final {
-  padding: 2rem 1rem;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-body.home .benefits ul {
+.plan-card ul {
   list-style: none;
   padding: 0;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  flex-grow: 1; /* Allows ul to take available space */
 }
 
-body.home .benefits li {
-  margin: 0.75rem 0;
-}
-
-body.home .testimonials blockquote {
-  background: #f3f4f6;
-  border-left: 4px solid #10b981;
-  padding: 1rem;
-  font-style: italic;
-  margin-bottom: 1rem;
-}
-
-body.home .cta-final {
-  text-align: center;
-  background: #ecfdf5;
-  margin-top: 2rem;
-}
-
-/* CADASTRO PAGE STYLES */
-body.cadastro header {
-  background-color: #064e3b;
-  color: white;
-  text-align: center;
-  padding: 2rem 1rem;
-}
-
-body.cadastro header h1 {
-  margin: 0;
-  font-size: 2rem;
-}
-
-body.cadastro header p {
-  font-size: 1rem;
-  opacity: 0.9;
-}
-
-body.cadastro .form-section {
-  padding: 2rem 1rem;
-  max-width: 600px;
-  margin: 2rem auto;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-
-body.cadastro h3 {
-  font-size: 1.4rem;
-  color: #065f46;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-body.cadastro form {
+.plan-card li {
+  margin-bottom: 0.75rem;
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  align-items: center; /* Align icon with text */
 }
 
-body.cadastro input,
-body.cadastro select,
-body.cadastro textarea {
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-  width: 100%;
-  max-width: 100%;
+.plan-card li::before { /* Custom bullet points */
+  content: '\2714'; /* Checkmark icon */
+  color: #00796b; /* Teal color for checkmark */
+  margin-right: 10px;
+  font-size: 1.2em;
 }
 
-body.cadastro label {
-  font-weight: 600;
+/* About Section */
+.about {
+  background-color: #e0f2f1; /* Light green background */
 }
 
-body.cadastro button {
-  padding: 0.75rem;
-  font-size: 1rem;
+/* Benefits Section - Styling for the list */
+.benefits ul {
+  list-style: none; /* Remove marcadores padrão */
+  padding-left: 0;    /* Remove o recuo padrão da lista */
+  text-align: left;   /* Alinha o texto dos itens à esquerda */
+  max-width: 700px;   /* Define uma largura máxima para melhor legibilidade */
+  margin: 1.5rem auto 0; /* Centraliza a lista na seção e adiciona margem superior */
+}
+
+.benefits li {
+  margin-bottom: 0.85rem; /* Espaçamento entre os itens da lista */
+  display: flex;          /* Permite alinhar o ícone com o texto */
+  align-items: flex-start;/* Alinha o ícone com o topo da primeira linha de texto */
+  font-size: 1.1rem;      /* Tamanho da fonte para melhor leitura */
+  line-height: 1.6;       /* Espaçamento entre linhas para textos mais longos */
+}
+
+.benefits li::before {
+  content: '\2714';       /* Adiciona o ícone de check */
+  color: #00796b;       /* Cor verde padrão do site para o ícone */
+  margin-right: 12px;     /* Espaçamento entre o ícone e o texto */
+  font-size: 1.2em;       /* Tamanho do ícone de check */
+  line-height: 1.4;       /* Ajusta o alinhamento vertical do checkmark */
+  flex-shrink: 0;         /* Impede que o ícone encolha se o texto for longo */
+}
+
+/* Testimonials Section */
+.testimonials blockquote {
+  background-color: #f9f9f9;
+  border-left: 5px solid #00796b; /* Teal accent */
+  margin: 1.5rem auto;
+  padding: 1.5rem;
+  max-width: 600px;
+  font-style: italic;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.testimonials blockquote p {
+  margin-bottom: 0.5rem;
+}
+
+.testimonials blockquote footer {
+  background-color: #f0f0f0; /* Fundo cinza bem claro */
+  padding: 0.5rem 1rem;       /* Adiciona um respiro interno */
+  border-radius: 4px;         /* Cantos levemente arredondados */
+  margin-top: 1rem;           /* Espaçamento acima do rodapé */
+  display: inline-block;      /* Para que o background se ajuste ao conteúdo */
+  text-align: right;
+  font-style: normal;
   font-weight: bold;
+  color: #555;               /* Cor do texto pode ser ajustada se necessário com o novo fundo */
+}
+
+/* Call to Action Section */
+.cta-final {
+  background-color: #004d40; /* Dark green background */
   color: white;
-  background-color: #10b981;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  padding: 3rem 1rem;
 }
 
-body.cadastro button:hover {
-  background-color: #059669;
+.cta-final h3 {
+  color: white; /* White text for dark background */
 }
 
-/* SHARED FOOTER */
+.cta-final .btn {
+  background-color: white;
+  color: #00796b;
+  font-size: 1.1rem;
+}
+
+.cta-final .btn:hover {
+  background-color: #f0f0f0; /* Slightly darker on hover */
+}
+
+/* Footer */
 footer {
-  background-color: #1f2937;
-  color: white;
+  background-color: #333;
+  color: #aaa;
+  padding: 2rem 1rem;
   text-align: center;
-  padding: 1rem;
   font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+footer a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .plans-container {
+    flex-direction: column; /* Stack plan cards on smaller screens */
+    align-items: center;
+  }
+
+  .plan-card {
+    width: 100%;
+    max-width: 400px; /* Allow cards to be wider on smaller screens */
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  .benefits ul {
+    padding-left: 1rem; /* Add some padding on mobile for benefits list */
+  }
 }

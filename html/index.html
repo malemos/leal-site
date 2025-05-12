@@ -3,74 +3,116 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Leal Contabilidade Online</title>
-  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <title>Leal Contabilidade Online - Layout Melhorado</title>
   <link rel="stylesheet" href="/css/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="home">
+<body>
   <header>
-    <h1>Leal Contabilidade Online</h1>
-    <p>Soluções digitais e descomplicadas para MEIs e pequenas empresas</p>
+    <div class="container">
+      <h1>Leal Contabilidade Online</h1>
+      <p>Soluções digitais e descomplicadas para MEIs e pequenas empresas</p>
+    </div>
   </header>
 
+  <nav>
+    <div class="container">
+      <a href="#planos">Nossos Planos</a>
+      <a href="#quem-somos">Quem Somos</a>
+      <a href="#beneficios">Vantagens</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="/html/cadastro.html">Começar Agora</a>
+    </div>
+  </nav>
+
   <section class="hero">
-    <h2>Simplifique sua contabilidade</h2>
-    <p>Abrimos CNPJ, geramos guias e cuidamos da sua empresa de forma 100% online</p>
-    <a href="cadastro.html" class="btn">Começar agora</a>
-  </section>
-
-  <section class="plans">
-    <h3>Nossos Planos</h3>
-    <div class="plan-card">
-      <h4>MEI Essencial</h4>
-      <p><strong>R$ 59/mês</strong></p>
-      <ul>
-        <li>Suporte da administrativo da MEI</li>
-        <li>Atendimento por WhatsApp</li>
-      </ul>
-      <a href="cadastro.html" class="btn">Assinar</a>
-    </div>
-    <div class="plan-card">
-      <h4>Simples Nacional</h4>
-      <p><strong>R$ 149/mês</strong></p>
-      <ul>
-        <li>Contabilidade completa</li>
-        <li>Geração de guias e relatórios</li>
-        <li>Atendimento personalizado</li>
-      </ul>
-      <a href="cadastro.html" class="btn">Assinar</a>
+    <div class="container">
+      <h2>Simplifique sua contabilidade com a Leal</h2>
+      <p>Abrimos CNPJ, geramos guias e cuidamos da sua empresa de forma 100% online, com a agilidade que você precisa.</p>
+      <a href="/html/cadastro.html" class="btn">Quero simplificar agora</a>
     </div>
   </section>
 
-  <section class="about" style="background: #f0fdf4;">
-    <h3>Quem Somos</h3>
-    <p>A Leal Assessoria Contábil nasceu para desburocratizar o serviço contábil no Brasil. Atendemos de forma 100% digital, com foco em MEIs e pequenas empresas que precisam de agilidade, suporte e clareza.</p>
+  <section id="planos" class="plans">
+    <div class="container">
+      <h3>Nossos Planos</h3>
+      <div class="plans-container">
+        <div class="plan-card">
+          <h4>MEI Essencial</h4>
+          <p class="price">R$ 59/mês</p>
+          <ul>
+            <li>Suporte administrativo da MEI</li>
+            <li>Atendimento especializado por WhatsApp</li>
+            <li>Emissão de guias DAS</li>
+            <li>Declaração Anual Simplificada (DASN-SIMEI)</li>
+          </ul>
+          <a href="/html/cadastro.html" class="btn">Assinar MEI Essencial</a>
+        </div>
+        <div class="plan-card">
+          <h4>Simples Nacional Pro</h4>
+          <p class="price">R$ 149/mês</p>
+          <ul>
+            <li>Contabilidade completa para sua empresa</li>
+            <li>Geração de guias e relatórios mensais</li>
+            <li>Atendimento personalizado e consultoria</li>
+            <li>Pró-labore e obrigações acessórias</li>
+          </ul>
+          <a href="/html/cadastro.html" class="btn">Assinar Simples Pro</a>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section class="benefits">
-    <h3>Vantagens para você</h3>
-    <ul>
-      <li>✅ Atendimento via WhatsApp com especialistas</li>
-      <li>✅ CNPJ aberto em até 24 horas</li>
-      <li>✅ Envio automático de obrigações</li>
-      <li>✅ Gestão contábil com suporte humano</li>
-    </ul>
+  <section id="quem-somos" class="about">
+    <div class="container">
+      <h3>Quem Somos</h3>
+      <p>A Leal Assessoria Contábil nasceu com a missão de desburocratizar e modernizar o serviço contábil no Brasil. Atendemos de forma 100% digital, com foco em Microempreendedores Individuais (MEIs) e pequenas empresas que buscam agilidade, suporte dedicado e clareza em todos os processos. Nossa equipe está pronta para oferecer as melhores soluções para o seu negócio.</p>
+    </div>
   </section>
 
-  <section class="testimonials" style="background: #f9fafb;">
-    <h3>Depoimentos</h3>
-    <blockquote>"Excelente atendimento, tudo resolvido com rapidez e clareza. Recomendo!" – Fernanda L.</blockquote>
-    <blockquote>"Nunca imaginei que abrir meu MEI seria tão fácil. Obrigado, Leal!" – Ricardo S.</blockquote>
+  <section id="beneficios" class="benefits">
+    <div class="container">
+      <h3>Vantagens Exclusivas para Você</h3>
+      <ul>
+        <li>Atendimento ágil e humanizado via WhatsApp com nossos especialistas</li>
+        <li>Abertura de CNPJ em até 24 horas, sem complicações</li>
+        <li>Envio automático de todas as suas obrigações fiscais e contábeis</li>
+        <li>Gestão contábil completa com suporte humano e tecnologia de ponta</li>
+        <li>Plataforma intuitiva para acompanhar tudo da sua empresa</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="depoimentos" class="testimonials">
+    <div class="container">
+      <h3>O que nossos clientes dizem</h3>
+      <blockquote>
+        <p>"Excelente atendimento, tudo resolvido com uma rapidez e clareza impressionantes. Recomendo a Leal de olhos fechados!"</p>
+        <footer>– Fernanda L., Empreendedora Digital</footer>
+      </blockquote>
+      <blockquote>
+        <p>"Nunca imaginei que abrir meu MEI e manter tudo em dia seria tão fácil e acessível. Obrigado, equipe Leal, vocês são demais!"</p>
+        <footer>– Ricardo S., Consultor Independente</footer>
+      </blockquote>
+    </div>
   </section>
 
   <section class="cta-final">
-    <h3>Pronto para simplificar sua contabilidade?</h3>
-    <a href="cadastro.html" class="btn">Começar agora</a>
+    <div class="container">
+      <h3>Pronto para transformar a contabilidade da sua empresa?</h3>
+      <p>Deixe a burocracia com a gente e foque no crescimento do seu negócio.</p>
+      <a href="/html/cadastro.html" class="btn">Começar agora é fácil</a>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Leal Assessoria Contábil • CNPJ 00.000.000/0001-00</p>
+    <div class="container">
+      <p>&copy; 2025 Leal Assessoria Contábil Online • Todos os direitos reservados.</p>
+      <p>CNPJ: 00.000.000/0001-00 • <a href="mailto:contato@lealcontabilidade.com.br">contato@lealcontabilidade.com.br</a></p>
+      <p><a href="#">Termos de Uso</a> | <a href="#">Política de Privacidade</a></p>
+    </div>
   </footer>
 </body>
 </html>
+
