@@ -4,24 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- SEO Meta Tags -->
-  <title>Cadastro | Leal Contabilidade Online - Comece Agora</title>
-  <meta name="description" content="Inicie sua jornada com a Leal Contabilidade Online. Preencha o formulário de cadastro e tenha acesso a serviços contábeis digitais e descomplicados para MEI e pequenas empresas." />
-  <meta name="keywords" content="cadastro contabilidade, contabilidade online, MEI, pequenas empresas, contador online, Leal Contabilidade, formulário contabilidade" />
-  <link rel="canonical" href="https://leal-site-seo-final.manus.space/html/cadastro.html" /> <!-- Placeholder, será atualizado com o domínio final -->
+  <title>Login | Leal Contabilidade Online - Área do Cliente</title>
+  <meta name="description" content="Acesse sua conta na Leal Contabilidade Online. Entre com seu CPF ou CNPJ e senha para gerenciar seus serviços contábeis." />
+  <meta name="keywords" content="login contabilidade, área do cliente, contabilidade online, MEI, pequenas empresas, Leal Contabilidade, acesso cliente" />
+  <link rel="canonical" href="https://leal-site-seo-final.manus.space/html/login.html" /> <!-- Placeholder, será atualizado com o domínio final -->
   <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Cadastro | Leal Contabilidade Online - Comece Agora" />
-  <meta property="og:description" content="Inicie sua jornada com a Leal Contabilidade Online. Preencha o formulário de cadastro e tenha acesso a serviços contábeis digitais.
-" />
+  <meta property="og:title" content="Login | Leal Contabilidade Online - Área do Cliente" />
+  <meta property="og:description" content="Acesse sua conta na Leal Contabilidade Online. Entre com seu CPF ou CNPJ e senha para gerenciar seus serviços contábeis." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://leal-site-seo-final.manus.space/html/cadastro.html" /> <!-- Placeholder -->
+  <meta property="og:url" content="https://leal-site-seo-final.manus.space/html/login.html" /> <!-- Placeholder -->
   <meta property="og:image" content="https://leal-site-seo-final.manus.space/assets/leal-contabilidade-og-image.png" /> <!-- Placeholder para imagem OG -->
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
   <!-- Meta tags existentes -->
   <meta name="author" content="Leal Contabilidade" />
   <meta name="robots" content="index, follow" />
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <!-- Stylesheets -->
   <link rel="stylesheet" href="/css/styles.css" />
   <link rel="stylesheet" href="/css/login.css" />
@@ -32,23 +31,41 @@
     "@type": "WebPage",
     "name": "Login - Leal Contabilidade Online",
     "description": "Acesse sua conta na Leal Contabilidade Online com CPF ou CNPJ.",
-    "url": "https://lealassessoriacontabil.com.br/html/login.html",
+    "url": "https://leal-site-seo-final.manus.space/html/login.html",
     "mainEntity": {
       "@type": "Organization",
       "name": "Leal Contabilidade Online",
-      "url": "https://lealassessoriacontabil.com.br/html/index.html"
+      "url": "https://leal-site-seo-final.manus.space/html/index.html"
     }
   }
   </script>
 </head>
-<body>
+<body class="login">
   <header>
     <div class="container">
-      <h1>Leal Contabilidade Online - Área do Cliente</h1>
-      <p>Acesse sua conta com CPF ou CNPJ</p>
+      <h1>Leal Contabilidade Online</h1>
+      <p>Soluções digitais e descomplicadas para MEIs e pequenas empresas</p>
     </div>
   </header>
-  <main class="form-container">
+
+  <nav>
+    <div class="container">
+      <a href="/html/index.html#planos">Nossos Planos</a>
+      <a href="/html/index.html#quem-somos">Quem Somos</a>
+      <a href="/html/index.html#beneficios">Vantagens</a>
+      <a href="/html/index.html#depoimentos">Depoimentos</a>
+      <a href="/html/cadastro.html">Começar Agora</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Área do Cliente</h2>
+      <p>Acesse sua conta com CPF ou CNPJ para gerenciar seus serviços contábeis.</p>
+    </div>
+  </section>
+
+  <div class="form-container">
     <form id="loginForm">
       <label for="cpfcnpj">CPF ou CNPJ:</label>
       <input type="text" name="cpfcnpj" id="cpfcnpj" required>
@@ -56,13 +73,24 @@
       <label for="senha">Senha:</label>
       <input type="password" name="senha" id="senha" required>
 
-      <button type="submit">Entrar</button>
+      <button type="submit" class="btn">Entrar</button>
+      <button type="button" class="btn-secondary" onclick="window.location.href='index.html'">Voltar</button>
+      
+      <p class="form-links">
+        <a href="#">Esqueci minha senha</a> | 
+        <a href="cadastro.html">Ainda não tenho cadastro</a>
+      </p>
+      
       <p id="mensagem"></p>
     </form>
-  </main>
+  </div>
 
   <footer>
-    <p>&copy; 2025 Leal Assessoria Contábil</p>
+    <div class="container">
+      <p>&copy; 2025 Leal Assessoria Contábil Online • Todos os direitos reservados.</p>
+      <p>CNPJ: 00.000.000/0001-00 • <a href="mailto:contato@lealcontabilidade.com.br">contato@lealcontabilidade.com.br</a></p>
+      <p><a href="#">Termos de Uso</a> | <a href="#">Política de Privacidade</a></p>
+    </div>
   </footer>
 
   <script src="/js/login.js"></script>
