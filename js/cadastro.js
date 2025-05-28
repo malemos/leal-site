@@ -49,3 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const campo = document.querySelector('input[name="cpfcnpj"]');
   if (campo) aplicarMascaraCpfCnpj(campo);
 });
+
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = { aplicarMascaraCpfCnpj };
+}
